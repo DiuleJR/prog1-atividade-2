@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 
 // 19.    Desenvolva um programa que receba um número inteiro e determine qual desses três divisíveis 
@@ -8,7 +9,7 @@
 
 int main() {
 
-    unsigned int numero, sub1, sub2, sub3;
+    int numero, sub1, sub2, sub3;
 
     printf("\nDigite um número: ");
     scanf("%d", &numero);
@@ -23,17 +24,17 @@ int main() {
     // divisao = numero - 1000;
     // printf("\nSubtra por 1000 = %.5f", divisao);
 
-    sub1 = numero - 10;
-    sub2 = numero - 100;
-    sub3 = numero - 1000;
+    sub1 = abs(numero - 10);
+    sub2 = abs(numero - 100);
+    sub3 = abs(numero - 1000);
 
-    printf("%f - %f - %f", sub1, sub2, sub3);
+    printf("%d - %d - %d", sub1, sub2, sub3);
 
-    if (sub1 > sub2 && sub1 > sub3) {
+    if (sub1 < sub2 && sub1 < sub3) {
         printf("\nO número %d está mais próximo do divisor 10", numero);
     }
 
-    else if (sub2 < sub1 && sub2 > sub3) {
+    else if (sub2 < sub1 && sub2 < sub3) {
         printf("\nO número %d está mais próximo do divisor 100", numero);
     }
 

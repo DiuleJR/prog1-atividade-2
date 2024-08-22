@@ -38,19 +38,19 @@ int main() {
         break;
     
     default:
-        printf("[!] Por favor escolha um dos eventos do menu.");
-        break;
+        printf("\n[!] Por favor escolha um dos eventos do menu.");
 
         return 0;
     }
 
     printf("\n>> Digite a quantidade de assentos que deseja: ");
     scanf("%d", &quantidadeVagas);
+    printf("============================\n");
 
     if (quantidadeVagas > capacidadeEvento) {
         printf("\nExcedeu a capacidade do evento. Por favor escolha um número menor de assentos.");
     } else {
-        printf("\n%d vagas reservadas com sucesso!", quantidadeVagas);
+        printf("\n%d vagas reservadas com sucesso!\n\n", quantidadeVagas);
     }
 
     return 0;
